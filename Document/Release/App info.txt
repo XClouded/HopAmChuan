@@ -1,0 +1,19 @@
+﻿App name: Hợp Âm Chuẩn
+App pakage name: com.hac.android.guitarchord
+Description:
+Ứng dụng tra cứu hợp âm cho người chơi guitar, được phát triển bởi http://hopamchuan.com với những tính năng nổi bật:
+
+- Dữ liệu gần 5000 bài hát và đang tăng lên mỗi ngày.
+- Chạy offline không cần mạng internet, có thể update bài hát mới qua Wifi/3G.
+- Hỗ trợ đổi tông hợp âm / tự động cuộn / tăng giảm cỡ chữ / nghe nhạc.
+- Quản lý và đồng bộ playlist/favorite với tài khoản của bạn trên http://hopamchuan.com
+- Hiển thị cách bấm hợp âm ở tất cả các thế tay, hiển thị hợp âm trên lời bài hát.
+- Chức năng tìm kiếm theo bài hát, ca sĩ, tác giả, tìm theo hợp âm.
+- Hiển thị tốt trên điện thoại / tablet để bạn có thể vừa nhìn hợp âm vừa chơi guitar.
+
+Category: Entertainment
+
+Tag: hợp âm chuẩn, hopamchuan.com, hợp âm, hợp âm guitar, chord, guitar chord
+
+Dev ID: 101007880
+App ID: 201068548
