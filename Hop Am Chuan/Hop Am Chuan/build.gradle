@@ -20,6 +20,24 @@ android {
         minSdkVersion 9
         targetSdkVersion 18
     }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("key/keystore.jks")
+            storePassword "123456"
+            keyAlias "hopamchuan"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFile file('key/proguard-android.txt')
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
 }
 
 dependencies {
