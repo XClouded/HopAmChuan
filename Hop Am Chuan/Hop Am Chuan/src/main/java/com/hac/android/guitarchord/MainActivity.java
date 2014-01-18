@@ -124,7 +124,7 @@ public class MainActivity extends SlidingMenuActionBarActivity
     /////////////////////////////////////////////////////////////////
     ////////////////// LIFE CYCLE ACTIVITY METHOD ///////////////////
 
-    public static final boolean DEVELOPER_MODE = true;
+    public static final boolean DEVELOPER_MODE = false;
 
     /** Open sliding menu when press menu option **/
     @Override
@@ -740,7 +740,7 @@ public class MainActivity extends SlidingMenuActionBarActivity
 
     @Override
     public void gotoCategoryPage(NavigationDrawerAdapter.ItemAdapter.TYPE pageType, int position) {
-        Log.e("DEBUG", "category: " + pageType);
+        // Log.e("DEBUG", "category: " + pageType);
         Fragment fragment = null;
         Bundle arguments = new Bundle();
         switch (pageType) {
@@ -770,7 +770,7 @@ public class MainActivity extends SlidingMenuActionBarActivity
         }
         // setting for Drawer List View
         if (mDrawerListView != null) {
-            LOGE("TRUNGDQ", "Main: set category: " + position);
+            // LOGE("TRUNGDQ", "Main: set category: " + position);
             mDrawerListView.setItemChecked(position + headerAdapter.getCount(), true);
         }
         // Open Custom Fragment
