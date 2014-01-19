@@ -7,6 +7,7 @@
 
     <com.hac.android.helper.widget.InfinityListView
         android:id="@+id/list"
+        android:layout_above="@id/startApp3DBanner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:drawSelectorOnTop="false"/>
@@ -33,4 +34,10 @@
 
     </LinearLayout>
 
+    <com.startapp.android.publish.banner.banner3d.Banner3D
+        android:layout_alignParentBottom="true"
+        android:id="@+id/startApp3DBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

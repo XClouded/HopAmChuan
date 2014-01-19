@@ -72,4 +72,8 @@ public class Config {
     public static final int MAX_LONG_WORK_TIMEOUT = 5000;
     public static final int DEFAULT_CONNECT_TIMEOUT = 10000;
     public static final int SONG_AUTO_SCROLL_DEFAULT_SPEED = 3;
+
+    /** Version config **/
+    public static final String STARTAPP_DEV_ID = "101007880";
+    public static final String STARTAPP_APP_ID = "201068548";
 }

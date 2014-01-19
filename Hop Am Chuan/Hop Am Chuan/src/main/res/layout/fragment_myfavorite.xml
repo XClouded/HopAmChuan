@@ -11,6 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/startApp3DBanner"
         android:paddingTop="59dp"
         >
         <com.hac.android.helper.widget.InfinityListView
@@ -62,4 +63,10 @@
             android:id="@+id/spinner"/>
 
     </RelativeLayout>
+    <com.startapp.android.publish.banner.banner3d.Banner3D
+        android:layout_alignParentBottom="true"
+        android:id="@+id/startApp3DBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

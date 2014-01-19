@@ -48,6 +48,7 @@ import com.hac.android.utils.LogUtils;
 import com.hac.android.utils.StringUtils;
 import com.hac.android.utils.UIUtils;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.startapp.android.publish.StartAppAd;
 
 import java.util.Calendar;
 import java.util.List;
@@ -120,6 +121,9 @@ public class MainActivity extends SlidingMenuActionBarActivity
     /** Android Built-in Mp3 Player */
     public static MediaPlayer player;
 
+    /** StartApp ads **/
+    public StartAppAd startAppAd = new StartAppAd(this);
+
     //region Activity Life Cycle Method
     /////////////////////////////////////////////////////////////////
     ////////////////// LIFE CYCLE ACTIVITY METHOD ///////////////////
@@ -156,6 +160,9 @@ public class MainActivity extends SlidingMenuActionBarActivity
         }
 
         super.onCreate(savedInstanceState);
+
+        /** StartApp **/
+        StartAppAd.init(this, Config.STARTAPP_DEV_ID, Config.STARTAPP_APP_ID);
 
         // Language setting
         UIUtils.setLanguage(getBaseContext());
@@ -225,9 +232,17 @@ public class MainActivity extends SlidingMenuActionBarActivity
         });
     }
 
+//    public void setUpAds() {
+//        if (Config.IS_ADS_VERSION) {
+//            startAppAd.showAd(); // show the ad
+//            startAppAd.loadAd(); // load the next ad
+//        }
+//    }
+
     @Override
     protected void onResume() {
         super.onResume();
+        startAppAd.onResume();
         bindService(mp3ServiceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
         headerAdapter.setDelegate(this);
         itemAdapter.setDelegate(this);
@@ -238,6 +253,7 @@ public class MainActivity extends SlidingMenuActionBarActivity
     @Override
     protected void onPause() {
         super.onPause();
+        startAppAd.onPause();
         headerAdapter.setDelegate(null);
         itemAdapter.setDelegate(null);
         playlistHeaderAdapter.setDelegate(null);
@@ -326,6 +342,7 @@ public class MainActivity extends SlidingMenuActionBarActivity
                 if (currentTime < mTimePressBackBtn + Config.TOAST_LENGTH_SHORT) {
                     // in fact. exit app
                     // super.onBackPressed(); // << This will cause a blank screen (as described in BUG.txt)
+                    startAppAd.onBackPressed();
                     finish();
                 } else {
                     Toast.makeText(getBaseContext(), getString(R.string.press_back_again), Toast.LENGTH_SHORT).show();

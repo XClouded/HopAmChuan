@@ -15,6 +15,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -133,6 +135,13 @@
             android:name="com.hac.android.guitarchord.FullscreenSongActivity"
             android:label="Full Screen Activity" >
         </activity>
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:taskAffinity="com.hac.android.guitarchord.AppWall"
+            android:theme="@android:style/Theme" />
+        <activity android:name="com.startapp.android.publish.AppWallActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:taskAffinity="com.hac.android.guitarchord.AppWall"
+            android:configChanges="orientation|keyboardHidden" />
     </application>
 
 </manifest>
